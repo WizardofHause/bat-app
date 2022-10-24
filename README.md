@@ -1,3 +1,20 @@
+Welcome to the Bat-page; an essential crime-fighting tool and organizational system for busy Batpersons to categorize known characters and suspects as they correllate to various crimes, disturbances, and general scummery throughout Gotham City.
+
+Given an array of characters, Batperson is able to:
+
+- View an array of all characters and villains in the db.json file - GET
+- Search those characters by name or alias - .filter()
+    - AND toggle populated characters based on freedom status
+- Update the database with new characters - POST
+- Remove characters from the database - DELETE
+- Toggle the 'freedom status' of any given character - PUT/PATCH
+- View the specific details of a given character by clicking the associated image
+- Update/edit a character's category - PUT/PATCH
+- Add characters to a 'List of Suspects' to evaluate
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
