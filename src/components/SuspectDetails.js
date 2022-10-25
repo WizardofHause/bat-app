@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 const SuspectDetails = ({ onDeleteSuspect }) => {
     const [suspect, setSuspect] = useState(null);
@@ -36,7 +36,6 @@ const SuspectDetails = ({ onDeleteSuspect }) => {
     return (
         <section>
             <div className="suspect-detail box">
-            <Link to="/home"><img src="https://www.freeiconspng.com/uploads/batman-logo-png-3.png" width="175" alt="Batman Logo" /></Link>
                 <h4>{alias}</h4>
                 <img className="avatar-img" src={image} alt={alias} />
                 <p>{name}</p>

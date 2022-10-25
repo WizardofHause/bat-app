@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import NavBar from './components/NavBar'
 import Home from './components/Home'
@@ -47,7 +47,6 @@ function App() {
             <Route path="/form" element={<SuspectForm onAddSuspect={handleAddSuspect} />} />
             <Route exact path="/suspects" element={
               <>
-                <Link to="/home"><img src="https://www.freeiconspng.com/uploads/batman-logo-png-3.png" width="175" alt="Batman Logo" /></Link>
                 <Search
                   search={search}
                   handleSearch={handleSearch}

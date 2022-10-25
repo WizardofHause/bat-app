@@ -3,7 +3,7 @@ import React from 'react'
 function Home() {
     return (
         <div id="home">
-               <img src="https://www.freeiconspng.com/uploads/batman-logo-png-3.png" width="350" alt="Batman Logo" />
+               <iframe src="https://giphy.com/embed/B4jfJqiIxvU08" width="480" height="329" frameBorder="0" title="batman" allowFullScreen></iframe>
         </div>
     )
 
