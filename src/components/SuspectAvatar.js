@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 
 function SuspectAvatar({ suspect, onDeleteSuspect }) {
-    const { id, alias, name, image, description, category, at_large } = suspect
+    const { id, alias, image, at_large } = suspect
 
     const [atLarge, setAtLarge] = useState(at_large)
 
@@ -21,13 +21,9 @@ function SuspectAvatar({ suspect, onDeleteSuspect }) {
 
     return (
         <li className="avatar">
-            
                 <figure className="container">
                     <h4>{alias}</h4>
                     <Link to={`/suspects/${id}`}><img className="avatar-img" src={image} alt={alias} /></Link>
-                    {/* <p>{name}</p>
-                    <p>{description}</p>
-                    <p>Category: {category}</p> */}
                     {atLarge ? (<button onClick={handleCaptured} className="button">AT LARGE</button>) : (<button onClick={handleAtLarge} className="button">CAPTURED</button>)}
                     <button className="button" onClick={handleDeleteClick}>DECEASED</button>
                 </figure>

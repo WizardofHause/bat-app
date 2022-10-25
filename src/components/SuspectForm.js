@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 function SuspectForm({ onAddSuspect }) {
     const [formData, setFormData] = useState({
@@ -44,6 +45,7 @@ function SuspectForm({ onAddSuspect }) {
     return (
         <section>
             <form className="container" onSubmit={handleSubmit}>
+            <Link to="/home"><img src="https://www.freeiconspng.com/uploads/batman-logo-png-3.png" width="175" alt="Batman Logo" /></Link>
                 <h3>Input Suspect Data</h3>
 
                 <label htmlFor="alias">Alias</label>

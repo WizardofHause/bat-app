@@ -10,7 +10,7 @@ function NavBar() {
                     {/* FORM TO ADD CRIMINALS */}
                     <Link to="/form" className="button">Upload</Link>
                     {/* LINK TO HOMEPAGE */}
-                    <Link to="/home" className="button">Home</Link>
+                    {/* <Link to="/home" className="button">Home</Link> */}
                     {/* LINK TO CRIMINALS LIST */}
                     <Link to="/suspects" className="button">Database</Link>
                 </div>
