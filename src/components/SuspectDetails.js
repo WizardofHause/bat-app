@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom"
 
 const SuspectDetails = ({ onDeleteSuspect }) => {
     const [suspect, setSuspect] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [atLarge, setAtLarge] = useState(true)
-
-
-    const id = 5
+    const { id } = useParams()
 
     useEffect(() => {
         fetch(`http://localhost:3000/suspects/${id}`)

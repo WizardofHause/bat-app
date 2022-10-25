@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import NavBar from './components/NavBar'
 import Home from './components/Home'
@@ -37,24 +38,34 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <NavBar />
-        <Home />
-        <SuspectDetails />
-        <SuspectForm onAddSuspect={handleAddSuspect} />
-        <Search
-          search={search}
-          handleSearch={handleSearch}
-        />
-        <SuspectPage
-          suspects={suspects}
-          setSuspects={setSuspects}
-          search={search}
-          onDeleteSuspect={handleDeleteSuspect}
-        />
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <NavBar />
+          <Routes >
+            <Route path="/home" element={<Home />} />
+            <Route path="/form" element={<SuspectForm onAddSuspect={handleAddSuspect} />} />
+            <Route path="/suspects" element={
+              <>
+                <Search
+                  search={search}
+                  handleSearch={handleSearch}
+                />
+                <SuspectPage
+                  suspects={suspects}
+                  setSuspects={setSuspects}
+                  search={search}
+                  onDeleteSuspect={handleDeleteSuspect}
+                />
+              </>
+            }
+            />
+            <Route path="/suspects/:id" element={<SuspectDetails />} />
+
+          </Routes>
+        </header>
+      </div>
+    </Router>
   );
 }
 
