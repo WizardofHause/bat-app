@@ -108,6 +108,15 @@
       "at_large": true,
       "category": 0,
       "id": 11
+    },
+    {
+      "alias": "Ra's al Ghul",
+      "name": "Ra's al Ghul",
+      "image": "https://comicvine.gamespot.com/a/uploads/original/0/8190/590706-13.jpg",
+      "description": "Lazarus Pit only sounds cool at first...",
+      "at_large": true,
+      "category": 0,
+      "id": 12
     }
   ]
 }
