@@ -6,7 +6,7 @@ const SuspectDetails = ({ onDeleteSuspect }) => {
     const [atLarge, setAtLarge] = useState(true)
 
 
-    const id = 1
+    const id = 5
 
     useEffect(() => {
         fetch(`http://localhost:3000/suspects/${id}`)
