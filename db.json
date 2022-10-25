@@ -99,6 +99,15 @@
       "at_large": true,
       "category": 9,
       "color": ""
+    },
+    {
+      "alias": "Catwoman",
+      "name": "Selina Kyle",
+      "image": "https://static.wikia.nocookie.net/batman/images/9/93/Profile-catwoman.jpg",
+      "description": "Rogue? Ally? Friend or foe? Answer: cat. ",
+      "at_large": true,
+      "category": 0,
+      "id": 11
     }
   ]
 }

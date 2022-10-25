@@ -5,6 +5,7 @@ import Home from './components/Home'
 import SuspectPage from './components/SuspectPage'
 import Search from './components/Search'
 import SuspectForm from "./components/SuspectForm";
+import SuspectDetails from "./components/SuspectDetails"
 
 function App() {
   const [suspects, setSuspects] = useState([])
@@ -13,8 +14,8 @@ function App() {
   // FETCH DATA FROM DB.JSON
   useEffect(() => {
     fetch("http://localhost:3000/suspects")
-    .then((r) => r.json())
-    .then((suspects) => setSuspects(suspects))
+      .then((r) => r.json())
+      .then((suspects) => setSuspects(suspects))
   }, [])
 
   //SEARCH HANDLER
@@ -27,6 +28,7 @@ function App() {
     setSuspects((suspects) => [...suspects, newSuspect])
   }
 
+  //REMOVE SUSPECT & UPDATE ARRAY
   const handleDeleteSuspect = (deletedSuspect) => {
     const updatedSuspects = suspects.filter(
       (suspect) => suspect.id !== deletedSuspect.id
@@ -39,15 +41,16 @@ function App() {
       <header className="App-header">
         <NavBar />
         <Home />
-        <Search 
+        <SuspectDetails />
+        <SuspectForm onAddSuspect={handleAddSuspect} />
+        <Search
           search={search}
           handleSearch={handleSearch}
         />
-        <SuspectForm onAddSuspect={handleAddSuspect} />
-        <SuspectPage 
+        <SuspectPage
           suspects={suspects}
           setSuspects={setSuspects}
-          search={search} 
+          search={search}
           onDeleteSuspect={handleDeleteSuspect}
         />
       </header>

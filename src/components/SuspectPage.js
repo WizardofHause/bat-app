@@ -4,7 +4,8 @@ import SuspectAvatar from "./SuspectAvatar"
 function SuspectPage({ suspects, search, onDeleteSuspect }) {
 
     const searchedSuspects = suspects.filter((suspect) => 
-    suspect.alias.toLowerCase().includes(search.toLowerCase()))
+    suspect.alias.toLowerCase().includes(search.toLowerCase()) 
+    || suspect.name.toLowerCase().includes(search.toLowerCase()))
 
 
     const suspectAvatar = searchedSuspects.map((suspect) => {

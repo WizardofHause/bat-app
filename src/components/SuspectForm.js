@@ -43,7 +43,7 @@ function SuspectForm({ onAddSuspect }) {
 
     return (
         <section>
-            <form className="suspect-form" onSubmit={handleSubmit}>
+            <form className="container" onSubmit={handleSubmit}>
                 <h3>Input Suspect Data</h3>
 
                 <label htmlFor="alias">Alias</label>

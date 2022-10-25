@@ -79,13 +79,17 @@ nav {
   border-radius: 4px;
 }
 
-.suspect-form > input, button {
+#search {
+  margin: 10px;
+}
+
+.container > input, button {
   padding: 10px;
-  margin: auto;
+  margin: 0.3rem;
   font-weight: 600;
   background-color: rgb(90, 90, 90);
 }
 
-.suspect-form > label {
-  padding: 10px;
+.container > label {
+  padding: 4px;
 }

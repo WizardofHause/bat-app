@@ -1,6 +1,7 @@
 import React from 'react'
 
 function NavBar() {
+
     return (
         <header>
             <nav className="header">

@@ -1,9 +1,9 @@
-import React, { useState } from "react"
+import React, {useState} from "react"
 
 function SuspectAvatar({ suspect, onDeleteSuspect }) {
-    const { id, alias, name, image, description, category } = suspect
+    const { id, alias, name, image, description, category, at_large } = suspect
 
-    const [atLarge, setAtLarge] = useState(true)
+    const [atLarge, setAtLarge] = useState(at_large)
 
     const handleDeleteClick = () => {
         fetch(`http://localhost:3000/suspects/${id}`, {
@@ -14,7 +14,9 @@ function SuspectAvatar({ suspect, onDeleteSuspect }) {
             .then(onDeleteSuspect(suspect));
     };
 
-    const handleAtLarge = (atLarge) => setAtLarge(!atLarge)
+    const handleAtLarge = (e) => setAtLarge(!e.target.value)
+
+    const handleCaptured = (atLarge) => setAtLarge(!atLarge)
 
     return (
         <li className="avatar">
@@ -24,7 +26,7 @@ function SuspectAvatar({ suspect, onDeleteSuspect }) {
                 <p>{name}</p>
                 <p>{description}</p>
                 <p>Category: {category}</p>
-                {atLarge ? (<button onClick={handleAtLarge} className="button">AT LARGE</button>) : (<button onClick={handleAtLarge} className="button">CAPTURED</button>)}
+                {atLarge ? (<button onClick={handleCaptured} className="button">AT LARGE</button>) : (<button onClick={handleAtLarge} className="button">CAPTURED</button>)}
                 <button className="button" onClick={handleDeleteClick}>DECEASED</button>
             </figure>
         </li>
