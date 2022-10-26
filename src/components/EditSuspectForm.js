@@ -66,7 +66,7 @@ function EditSuspectForm({ onUpdateSuspect }) {
                     onChange={handleChange}
                     value={image}
                 />
-                <img className="avatar-img" src={image} alt="Enter an image URL" />
+                <img className="avatar-img" src={image} alt={alias} placeholder="Enter a URL" />
                 <label htmlFor="name">Name</label>
                 <input
                     type="text"
@@ -101,12 +101,12 @@ function EditSuspectForm({ onUpdateSuspect }) {
                         <option value="10">10</option>
                     </select>
                 </label>
-                <label>
+                {/* <label>
                     <select name="at_large" value={at_large} onChange={handleChange}>
-                        <option value="true">AT LARGE</option>
-                        <option value="false">INCARCERATED</option>
+                        <option value={true}>AT LARGE</option>
+                        <option value={false}>INCARCERATED</option>
                     </select>
-                </label>
+                </label> */}
                 <button className="update-button" type="submit">Update Suspect</button>
                 {/* BUTTON TO GO BACK TO DATABASE */}
             </form>
