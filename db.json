@@ -7,7 +7,7 @@
       "image": "https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/7538232-three-jokers-1-cvr-fnl-1583776056592.jpg",
       "description": "Just the worst. Really, no joke!",
       "at_large": false,
-      "category": "6",
+      "category": "10",
       "color": "purple"
     },
     {
@@ -16,8 +16,8 @@
       "name": "Harvey Apollo Dent",
       "image": "https://static.wikia.nocookie.net/batman/images/a/a0/1692963-profile_twoface.jpeg",
       "description": "Has two faces. One is super gross.",
-      "at_large": false,
-      "category": 7,
+      "at_large": true,
+      "category": "8",
       "color": "red"
     },
     {

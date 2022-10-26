@@ -48,8 +48,9 @@ function EditSuspectForm({ onUpdateSuspect }) {
     };
 
     return (
-        <section>
-            <form className="container" onSubmit={handleSubmit}>
+        <section className="form-section">
+            <div className="div-box">
+            <form className="form" onSubmit={handleSubmit}>
                 <label htmlFor="alias">Alias</label>
                 <input
                     type="text"
@@ -116,6 +117,7 @@ function EditSuspectForm({ onUpdateSuspect }) {
             </form>
             <Link to={`/suspects/${id}`}><button className="button">Suspect Details</button></Link>
             <Link to="/suspects"><button className="button">Back to Database</button></Link>
+            </div>
         </section>
     );
 

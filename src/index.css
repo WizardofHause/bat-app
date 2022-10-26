@@ -95,10 +95,30 @@ nav {
 .form-section {
   background-image: url('https://w0.peakpx.com/wallpaper/791/568/HD-wallpaper-batman-dc-comics-joker-penguin-dc-comics-poison-ivy.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  padding: 180px;
+  margin: auto;
+  padding: 100px;
 }
 
 iframe {
   border-radius: 8px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+  border: 2px solid "dark-turquoise";
+  padding: 1.75rem;
+  text-align: left;
+}
+
+.form img {
+  margin: auto;
+}
+
+.div-box {
+  background-color: rgba(0, 0, 0, .7);
 }

@@ -38,62 +38,64 @@ function SuspectForm({ onAddSuspect }) {
 
     return (
         <section className="form-section">
-            <form className="container" onSubmit={handleSubmit}>
-                <h3>Input Suspect Data</h3>
+            <div className="div-box">
+                <form className="form" onSubmit={handleSubmit}>
+                    <h3>Input Suspect Data</h3>
 
-                <label htmlFor="alias">Alias</label>
-                <input
-                    type="text"
-                    id="alias"
-                    name="alias"
-                    onChange={handleChange}
-                    value={formData.alias}
-                />
-                <label htmlFor="name">Name</label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    onChange={handleChange}
-                    value={formData.name}
-                />
-                <label htmlFor="image">Photo</label>
-                <input
-                    type="text"
-                    id="image"
-                    name="image"
-                    onChange={handleChange}
-                    value={formData.image}
-                />
-                <label htmlFor="description">Description
-                    <textarea
-                        id="description"
-                        name="description"
-                        value={formData.description}
+                    <label htmlFor="alias">Alias</label>
+                    <input
+                        type="text"
+                        id="alias"
+                        name="alias"
                         onChange={handleChange}
+                        value={formData.alias}
                     />
-                </label>
-                <label htmlFor="category">Category
-                    <select
-                        name="category"
-                        value={formData.category}
+                    <label htmlFor="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
                         onChange={handleChange}
-                    >
-                        {/* MAKE CATEGORIES */}
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="DECEASED">DECEASED</option>
-                    </select>
-                </label>
-                <button className="add-button" type="submit">Add Suspect</button>
-            </form>
+                        value={formData.name}
+                    />
+                    <label htmlFor="image">Photo</label>
+                    <input
+                        type="text"
+                        id="image"
+                        name="image"
+                        onChange={handleChange}
+                        value={formData.image}
+                    />
+                    <label htmlFor="description">Description
+                        <textarea
+                            id="description"
+                            name="description"
+                            value={formData.description}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label htmlFor="category">Category
+                        <select
+                            name="category"
+                            value={formData.category}
+                            onChange={handleChange}
+                        >
+                            {/* MAKE CATEGORIES */}
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="DECEASED">DECEASED</option>
+                        </select>
+                    </label>
+                    <button className="add-button" type="submit">Add Suspect</button>
+                </form>
+            </div>
         </section>
     )
 }
