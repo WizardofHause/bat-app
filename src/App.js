@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import NavBar from './components/NavBar'
 import Home from './components/Home'
-import SuspectPage from './components/SuspectPage'
+import SuspectList from './components/SuspectList'
 import Search from './components/Search'
 import SuspectForm from "./components/SuspectForm";
 import SuspectDetails from "./components/SuspectDetails"
+import EditSuspectForm from "./components/EditSuspectForm"
 
 function App() {
   const [suspects, setSuspects] = useState([])
@@ -37,30 +38,59 @@ function App() {
     setSuspects(updatedSuspects);
   };
 
+  const handleToggleSuspect = (toggledSuspect) => {
+    const toggledSuspects = suspects.map((suspect) => {
+      if (suspect.id === toggledSuspect.id) {
+        return toggledSuspect;
+      } else {
+        return suspect;
+      }
+    })
+    setSuspects(toggledSuspects)
+  }
+
+  const handleUpdateSuspect = (updatedSuspect) => {
+    setSuspects(suspects => suspects.map(oldSuspect => {
+      if (oldSuspect.id === updatedSuspect.id) {
+        return updatedSuspect;
+      } else {
+        return oldSuspect;
+      }
+    }))
+  }
+
   return (
     <Router>
       <div className="App">
         <header className="App-header">
           <NavBar />
           <Routes >
+            <Route path="/suspects/:id/edit" element={<EditSuspectForm onUpdateSuspect={handleUpdateSuspect} />}/>
             <Route path="/home" element={<Home />} />
-            <Route path="/form" element={<SuspectForm onAddSuspect={handleAddSuspect} />} />
+            <Route path="/suspects/new" element={<SuspectForm onAddSuspect={handleAddSuspect} />} />
             <Route exact path="/suspects" element={
               <>
                 <Search
                   search={search}
                   handleSearch={handleSearch}
                 />
-                <SuspectPage
+                <SuspectList
                   suspects={suspects}
                   setSuspects={setSuspects}
                   search={search}
                   onDeleteSuspect={handleDeleteSuspect}
+                  onToggleSuspect={handleToggleSuspect}
                 />
               </>
             }
             />
-            <Route path="/suspects/:id" element={<SuspectDetails />} />
+            <Route path="/suspects/:id"
+              element={
+                <SuspectDetails
+                  onToggleSuspect={handleToggleSuspect}
+                />
+              }
+            />
 
           </Routes>
         </header>

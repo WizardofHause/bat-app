@@ -1,7 +1,7 @@
 import React from 'react'
 import SuspectAvatar from "./SuspectAvatar"
 
-function SuspectPage({ suspects, search, onDeleteSuspect }) {
+function SuspectList({ suspects, search, onDeleteSuspect, onToggleSuspect }) {
 
     const searchedSuspects = suspects.filter((suspect) => 
     suspect.alias.toLowerCase().includes(search.toLowerCase()) 
@@ -14,6 +14,7 @@ function SuspectPage({ suspects, search, onDeleteSuspect }) {
                 key={suspect.id}
                 suspect={suspect}
                 onDeleteSuspect={onDeleteSuspect}
+                onToggleSuspect={onToggleSuspect}
             />
         )
     })
@@ -26,4 +27,4 @@ function SuspectPage({ suspects, search, onDeleteSuspect }) {
     )
 }
 
-export default SuspectPage
+export default SuspectList

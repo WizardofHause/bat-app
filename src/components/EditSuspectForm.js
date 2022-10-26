@@ -1,16 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 
 const initialState = {
     alias: "",
     name: "",
     image: "",
     description: "",
-    at_large: true,
-    category: 0
-}
+    at_large: "",
+    category: 0,
+  };
 
-function SuspectForm({ onAddSuspect }) {
+function EditSuspectForm({ onUpdateSuspect}) {
     const [formData, setFormData] = useState(initialState)
+
+    const { alias, name, image, description, at_large, category } = formData
+
+    const { id } = useParams();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetch(`http://localhost:3000/suspects/${id}`)
+        .then((r) => r.json())
+        .then((suspect) => setFormData(suspect))
+    }, [id])
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -20,26 +32,25 @@ function SuspectForm({ onAddSuspect }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch("http://localhost:3000/suspects", {
-            method: "POST",
+        fetch(`http://localhost:3000/suspects/${id}`, {
+            method: "PATCH",
             headers: {
-                "Content-Type": "application/json",
-                accept: "application/json"
+              "Content-Type": "application/json"
             },
-            body: JSON.stringify({ ...formData })
-        })
-            .then((r) => r.json())
-            .then((suspect) => {
-                onAddSuspect(suspect);
-                setFormData(initialState)
-            })
-    }
+            body: JSON.stringify(formData),
+          })
+          .then((r) => r.json())
+          .then((updatedSuspect) => {
+            onUpdateSuspect(updatedSuspect);
+            navigate.push(`/suspects/${id}`);
+            navigate(`/suspects/${id}`)
+          });
+        };
 
-
-    return (
+      return (
         <section className="form-section">
             <form className="container" onSubmit={handleSubmit}>
-                <h3>Input Suspect Data</h3>
+                <h3>Update Suspect Data</h3>
 
                 <label htmlFor="alias">Alias</label>
                 <input
@@ -47,7 +58,7 @@ function SuspectForm({ onAddSuspect }) {
                     id="alias"
                     name="alias"
                     onChange={handleChange}
-                    value={formData.alias}
+                    value={alias}
                 />
                 <label htmlFor="name">Name</label>
                 <input
@@ -55,7 +66,7 @@ function SuspectForm({ onAddSuspect }) {
                     id="name"
                     name="name"
                     onChange={handleChange}
-                    value={formData.name}
+                    value={name}
                 />
                 <label htmlFor="image">Photo</label>
                 <input
@@ -63,20 +74,20 @@ function SuspectForm({ onAddSuspect }) {
                     id="image"
                     name="image"
                     onChange={handleChange}
-                    value={formData.image}
+                    value={image}
                 />
                 <label htmlFor="description">Description
                     <textarea
                         id="description"
                         name="description"
-                        value={formData.description}
+                        value={description}
                         onChange={handleChange}
                     />
                 </label>
                 <label htmlFor="category">Category
                     <select
                         name="category"
-                        value={formData.category}
+                        value={category}
                         onChange={handleChange}
                     >
                         <option value="1">1</option>
@@ -91,10 +102,16 @@ function SuspectForm({ onAddSuspect }) {
                         <option value="10">10</option>
                     </select>
                 </label>
-                <button className="add-button" type="submit">Add Suspect</button>
+                <label>
+                    <select value={at_large} onChange={handleChange}>
+                        <option value="true">AT LARGE</option>
+                        <option value="false">INCARCERATED</option>
+                    </select>
+                </label>
+                <button className="update-button" type="submit">Update Suspect</button>
             </form>
         </section>
     )
 }
 
-export default SuspectForm
+export default EditSuspectForm

@@ -6,12 +6,13 @@ Given an array of characters, any Batperson is able to:
 - Search those characters by name or alias - .filter()
 - Update the database with new characters - POST
 - Remove characters from the database - DELETE
+- View the specific details of a given character by clicking the associated image - GET
 
-- Toggle populated characters based on freedom status
+
+- Toggle populated characters based on freedom status - PUT/PATCH
 - Toggle the 'freedom status' of any given character - PUT/PATCH
-- View the specific details of a given character by clicking the associated image
 - Update/edit a character's category - PUT/PATCH
-- Add characters to a 'List of Suspects' to evaluate
+- Add characters to a 'List of Suspects' to evaluate - PUT/PATCH
 
 Whimsical Brainstorm: 
 https://whimsical.com/bat-page-outline-DPLbaiVwrGc2KHBbsu6bqP

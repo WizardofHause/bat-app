@@ -8,7 +8,7 @@ function NavBar() {
             <nav className="header">
                 <div className="links">
                     {/* FORM TO ADD CRIMINALS */}
-                    <Link to="/form" className="button">Upload</Link>
+                    <Link to="/suspects/new" className="button">Upload</Link>
                     {/* LINK TO HOMEPAGE */}
                     <Link to="/home"><img src="https://www.freeiconspng.com/uploads/batman-logo-png-3.png" width="175" alt="Batman Logo" /></Link>
                     {/* LINK TO CRIMINALS LIST */}
