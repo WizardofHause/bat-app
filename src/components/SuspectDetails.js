@@ -22,9 +22,9 @@ const SuspectDetails = () => {
 
     return (
         <section>
-            <div className="suspect-detail box">
+            <div className="container">
                 <h4>{alias}</h4>
-                <img className="avatar-img" src={image} alt={alias} />
+                <img className="avatar-img" src={image} alt="Enter an image URL" />
                 <p>{name}</p>
                 <p>{description}</p>
                 <p>Category: {category}</p>
