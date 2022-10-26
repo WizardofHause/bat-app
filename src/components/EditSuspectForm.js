@@ -110,6 +110,7 @@ function EditSuspectForm({ onUpdateSuspect}) {
                 </label>
                 <button className="update-button" type="submit">Update Suspect</button>
                 <Link to="/suspects/"><button className="button">Back to Database</button></Link>
+                <Link to={`/suspects/${id}`}><button className="button">Suspect Details</button></Link>
             </form>
         </section>
     )

@@ -88,7 +88,7 @@ function SuspectForm({ onAddSuspect }) {
                         <option value="7">7</option>
                         <option value="8">8</option>
                         <option value="9">9</option>
-                        <option value="10">10</option>
+                        <option value="DECEASED">DECEASED</option>
                     </select>
                 </label>
                 <button className="add-button" type="submit">Add Suspect</button>

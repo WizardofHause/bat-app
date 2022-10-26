@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 function NavBar() {
     return (
         <header>
-            <nav className="header">
-                <div className="links">
+            <nav className="container">
+                <div>
                     {/* FORM TO ADD CRIMINALS */}
-                    <Link to="/suspects/new" className="button">Upload</Link>
+                    <span className="header--title"><Link to="/suspects/new"><button className="button">Upload</button></Link></span>
                     {/* LINK TO HOMEPAGE */}
-                    <Link to="/home"><img src="https://www.freeiconspng.com/uploads/batman-logo-png-3.png" width="175" alt="Batman Logo" /></Link>
+                    <span className="header--image"><Link to="/home"><img src="https://www.freeiconspng.com/uploads/batman-logo-png-3.png" width="87.5" alt="Batman Logo" /></Link></span>
                     {/* LINK TO CRIMINALS LIST */}
-                    <Link to="/suspects" className="button">Database</Link>
+                    <span className="header--title"><Link to="/suspects"><button className="button">Database</button></Link></span>
                 </div>
             </nav>
         </header>

@@ -96,7 +96,7 @@
       "name": "Waylon Jones",
       "image": "https://comicvine.gamespot.com/a/uploads/scale_small/11134/111348782/8439519-rco001_1646177598.jpg",
       "description": "Half killer, half crocodile, half douchebag.",
-      "at_large": true,
+      "at_large": false,
       "category": 9,
       "color": "",
       "": "false"
@@ -116,7 +116,7 @@
       "image": "https://comicvine.gamespot.com/a/uploads/original/0/8190/590706-13.jpg",
       "description": "Lazarus Pit only sounds cool at first...",
       "at_large": true,
-      "category": 0,
+      "category": "5",
       "id": 12
     }
   ]

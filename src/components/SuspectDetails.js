@@ -30,6 +30,7 @@ const SuspectDetails = () => {
                 <p>Category: {category}</p>
                 <p>Status: {at_large ? "AT LARGE" : "INCARCERATED"}</p>
                 {/* BUTTON TO GO BACK TO DATABASE */}
+                <Link to={`/suspects/${id}/edit`}><button className="button">Edit Details</button></Link>
                 <Link to="/suspects"><button className="button">Back to Database</button></Link>
             </div>
         </section>

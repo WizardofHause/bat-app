@@ -24,23 +24,21 @@ body {
   text-shadow: #000000 2px 2px;
 }
 
-.header {
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-}
-
 nav {
-  padding: 1rem;
   display: flex;
-  justify-content: space-between;
-  align-content: center;
+  align-items: center;
+  height: 65px;
+  padding: 20px;
 }
 
-.links {
-  margin: auto;
-  padding: 15px;
+.header--image {
+  height: 100%;
+  margin: 200px;
+}
+
+.header--title {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
 }
 
 .button {
