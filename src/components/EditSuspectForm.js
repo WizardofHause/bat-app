@@ -89,6 +89,7 @@ function EditSuspectForm({ onUpdateSuspect }) {
                         value={category}
                         onChange={handleChange}
                     >
+                        {/* MAKE CATEGORIES */}
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -101,14 +102,17 @@ function EditSuspectForm({ onUpdateSuspect }) {
                         <option value="10">10</option>
                     </select>
                 </label>
-                {/* <label>
+                
+                {/* FIGURE OUT HOW TO RETAIN THE ADJUSTMENT FOR FREEDOM STATUS
+                PROBABLY NEED A HIGHER COMPONENT TO HANDLE THE STATE FOR ALL COMPONENTS
+                
+                <label>
                     <select name="at_large" value={at_large} onChange={handleChange}>
                         <option value={true}>AT LARGE</option>
                         <option value={false}>INCARCERATED</option>
                     </select>
                 </label> */}
                 <button className="update-button" type="submit">Update Suspect</button>
-                {/* BUTTON TO GO BACK TO DATABASE */}
             </form>
             <Link to={`/suspects/${id}`}><button className="button">Suspect Details</button></Link>
             <Link to="/suspects"><button className="button">Back to Database</button></Link>

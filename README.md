@@ -7,12 +7,18 @@ Given an array of characters, any Batperson is able to:
 - Update the database with new characters - POST
 - Remove characters from the database - DELETE
 - View the specific details of a given character by clicking the associated image - GET
-
-
-- Toggle populated characters based on freedom status - PUT/PATCH
+- Update/edit a character's details - PUT/PATCH
 - Toggle the 'freedom status' of any given character - PUT/PATCH
-- Update/edit a character's category - PUT/PATCH
-- Add characters to a 'List of Suspects' to evaluate - PUT/PATCH
+
+ToDo:
+- Toggle populated characters in SuspectList based on freedom status - PUT/PATCH
+- Add characters to a 'List of Suspects' to evaluate (use freedom toggle) - PUT/PATCH
+- Make EDIT page look the same as the DETAILS page
+- Align the elements in the NavBar
+- Make DETAILS, FORM, and UPDATE containers all uniform in style
+- Make BUTTONS all consistant 
+- Make IMAGES fill their card container with NAME displayed over top
+- Make distinct classes for each character (add selector to ADD and UPDATE, toggle for INCARCERATED??) 
 
 Whimsical Brainstorm: 
 https://whimsical.com/bat-page-outline-DPLbaiVwrGc2KHBbsu6bqP

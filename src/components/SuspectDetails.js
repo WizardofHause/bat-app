@@ -24,7 +24,7 @@ const SuspectDetails = () => {
         <section>
             <div className="container">
                 <h4>{alias}</h4>
-                <img className="avatar-img" src={image} alt="Enter an image URL" />
+                <img className="avatar-img" src={image} alt={alias} />
                 <p>{name}</p>
                 <p>{description}</p>
                 <p>Category: {category}</p>
