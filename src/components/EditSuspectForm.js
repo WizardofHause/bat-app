@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 const initialState = {
     alias: "",
@@ -109,6 +109,7 @@ function EditSuspectForm({ onUpdateSuspect}) {
                     </select>
                 </label>
                 <button className="update-button" type="submit">Update Suspect</button>
+                <Link to="/suspects/"><button className="button">Back to Database</button></Link>
             </form>
         </section>
     )

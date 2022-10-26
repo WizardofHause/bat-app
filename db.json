@@ -7,7 +7,7 @@
       "image": "https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/7538232-three-jokers-1-cvr-fnl-1583776056592.jpg",
       "description": "Just the worst. Really, no joke.",
       "at_large": true,
-      "category": 10,
+      "category": "10",
       "color": "purple"
     },
     {
@@ -98,7 +98,8 @@
       "description": "Half killer, half crocodile, half douchebag.",
       "at_large": true,
       "category": 9,
-      "color": ""
+      "color": "",
+      "": "false"
     },
     {
       "alias": "Catwoman",

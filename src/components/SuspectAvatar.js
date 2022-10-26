@@ -34,7 +34,7 @@ function SuspectAvatar({ suspect, onDeleteSuspect, onToggleSuspect }) {
                     <Link to={`/suspects/${id}`}><img className="avatar-img" src={image} alt={alias} /></Link>
                         <button className={at_large ? "at-large" : "captured"} onClick={handleFreedomClick}>{at_large ? "AT LARGE" : "INCARCERATED"}</button>
                     <button className="button" onClick={handleDeleteClick}>DECEASED</button>
-                    <Link to={`/suspects/${id}/edit`} className="button">Edit</Link>
+                    <Link to={`/suspects/${id}/edit`}><button className="button">Edit</button></Link>
                 </figure>
         </li>
     )
