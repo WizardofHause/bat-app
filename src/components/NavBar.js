@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
-        <header>
-            <nav className="container">
-                <div>
+        <header className="nav-container">
+            {/* LINK TO HOMEPAGE : AS BATMAN SYMBOL */}
+            <Link to="/home"><img src="https://www.freeiconspng.com/uploads/batman-logo-png-3.png" alt="Batman Logo" className="nav--image"/></Link>
+            <nav>
+                <ul>
                     {/* FORM TO ADD CRIMINALS */}
-                    <span className="header--title"><Link to="/suspects/new"><button className="button">Upload</button></Link></span>
-                    {/* LINK TO HOMEPAGE */}
-                    <span className="header--image"><Link to="/home"><img src="https://www.freeiconspng.com/uploads/batman-logo-png-3.png" width="87.5" alt="Batman Logo" /></Link></span>
+                    <Link to="/suspects/new"><li className="nav--title">Upload</li></Link>
                     {/* LINK TO CRIMINALS LIST */}
-                    <span className="header--title"><Link to="/suspects"><button className="button">Database</button></Link></span>
-                </div>
+                    <Link to="/suspects"><li className="nav--title">Database</li></Link>
+                </ul>
             </nav>
         </header>
     )

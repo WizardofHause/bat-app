@@ -5,7 +5,7 @@ import NavBar from './components/NavBar'
 import Home from './components/Home'
 import SuspectList from './components/SuspectList'
 import Search from './components/Search'
-import SuspectForm from "./components/SuspectForm";
+import SuspectForm from "./components/SuspectForm"
 import SuspectDetails from "./components/SuspectDetails"
 import EditSuspectForm from "./components/EditSuspectForm"
 
@@ -61,8 +61,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
+      <div>
           <NavBar />
           <Routes >
             <Route path="/suspects/:id/edit" element={<EditSuspectForm onUpdateSuspect={handleUpdateSuspect} />}/>
@@ -93,7 +92,6 @@ function App() {
             />
 
           </Routes>
-        </header>
       </div>
     </Router>
   );

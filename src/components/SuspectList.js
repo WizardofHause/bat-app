@@ -3,9 +3,9 @@ import SuspectAvatar from "./SuspectAvatar"
 
 function SuspectList({ suspects, search, onDeleteSuspect, onToggleSuspect }) {
 
-    const searchedSuspects = suspects.filter((suspect) => 
-    suspect.alias.toLowerCase().includes(search.toLowerCase()) 
-    || suspect.name.toLowerCase().includes(search.toLowerCase()))
+    const searchedSuspects = suspects.filter((suspect) =>
+        suspect.name.toLowerCase().includes(search.toLowerCase())
+        || suspect.full_name.toLowerCase().includes(search.toLowerCase()))
 
 
     const suspectAvatar = searchedSuspects.map((suspect) => {
@@ -22,7 +22,9 @@ function SuspectList({ suspects, search, onDeleteSuspect, onToggleSuspect }) {
     return (
         <section>
             <h2>Noted Criminals / Potential Suspects</h2>
-            <div className="container"><ul>{suspectAvatar}</ul></div>
+            <div className="container">
+                <ul>{suspectAvatar}</ul>
+            </div>
         </section>
     )
 }

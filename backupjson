@@ -1,0 +1,149 @@
+{
+    "suspects": [
+      {
+        "id": 1,
+        "alias": "The Joker",
+        "name": "Jack Oswald White, Arthur Kent, Jack Napier",
+        "image": "https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/7538232-three-jokers-1-cvr-fnl-1583776056592.jpg",
+        "description": "Just the worst. Really, no joke!",
+        "at_large": false,
+        "category": "10",
+        "color": "purple"
+      },
+      {
+        "id": 2,
+        "alias": "Two-Face",
+        "name": "Harvey Apollo Dent",
+        "image": "https://static.wikia.nocookie.net/batman/images/a/a0/1692963-profile_twoface.jpeg",
+        "description": "Has two faces. One is super gross.",
+        "at_large": true,
+        "category": "8",
+        "color": "red"
+      },
+      {
+        "id": 3,
+        "alias": "The Penguin",
+        "name": "Oswald Chesterfield Cobblepot",
+        "image": "https://alchetron.com/cdn/penguin-comics-589a1d59-cb21-48b2-888d-052bdf68c85-resize-750.jpeg",
+        "description": "Not actually a penguin. Smells like one though.",
+        "at_large": true,
+        "category": 6,
+        "color": "yellow"
+      },
+      {
+        "id": 4,
+        "alias": "Poison Ivy",
+        "name": "Pamela Lillian Isley",
+        "image": "https://comicvine.gamespot.com/a/uploads/original/11138/111381541/8625217-poison-ivy-7-1-25-variant-674x1024.jpg",
+        "description": "Worse than actual Poison Ivy. Especially for the bank account.",
+        "at_large": true,
+        "category": 9,
+        "color": "dark green"
+      },
+      {
+        "id": 5,
+        "alias": "Mr. Freeze",
+        "name": "Dr. Victor Fries",
+        "image": "https://comicvine.gamespot.com/a/uploads/original/6/66303/2361007-batman_annual_02_1000.jpg",
+        "description": "Cold as ice, and willing to sacrifice FOR his love.",
+        "at_large": true,
+        "category": 8,
+        "color": "light blue"
+      },
+      {
+        "id": 6,
+        "alias": "Bane",
+        "name": "Antonio Diego",
+        "image": "https://static.wikia.nocookie.net/marvel_dc/images/b/b0/Batman_Vol_3_18_Textless.jpg",
+        "description": "Loves venom. Not much of a talker. Worse if Ivy is around",
+        "at_large": true,
+        "category": 8,
+        "color": "neon green"
+      },
+      {
+        "id": 7,
+        "alias": "The Riddler",
+        "name": "Edward E. Nygma",
+        "image": "https://static.wikia.nocookie.net/antagonists/images/0/0e/Theriddler-profile-bmarktr_cvr_rev-v1-401x600-masthead.jpg",
+        "description": "Riddle me this: nobody likes riddles.",
+        "at_large": true,
+        "category": 6,
+        "color": ""
+      },
+      {
+        "id": 8,
+        "alias": "Harley Quinn",
+        "name": "Dr. Harleen Frances Quinzel",
+        "image": "https://static.wikia.nocookie.net/batman/images/d/dd/HarleyQuinn1.jpg",
+        "description": "Like harlequin. Hilarious. (ಠ_ಠ)",
+        "at_large": true,
+        "category": 7,
+        "color": ""
+      },
+      {
+        "id": 9,
+        "alias": "Scarecrow",
+        "name": "Dr. Jonathan Crane",
+        "image": "https://static.wikia.nocookie.net/villains/images/3/37/Batman_Vol_3_112_Textless_Variant.png",
+        "description": "Who's afraid of a SCARECROW? Pfffft! Crows probably.",
+        "at_large": true,
+        "category": 8,
+        "color": ""
+      },
+      {
+        "id": 10,
+        "alias": "Killer Croc",
+        "name": "Waylon Jones",
+        "image": "https://comicvine.gamespot.com/a/uploads/scale_small/11134/111348782/8439519-rco001_1646177598.jpg",
+        "description": "Half killer, half crocodile, half douchebag.",
+        "at_large": false,
+        "category": 9,
+        "color": "",
+        "": "false"
+      },
+      {
+        "alias": "Catwoman",
+        "name": "Selina Kyle",
+        "image": "https://static.wikia.nocookie.net/batman/images/9/93/Profile-catwoman.jpg",
+        "description": "Rogue? Ally? Friend or foe? Answer: cat. ",
+        "at_large": true,
+        "category": 0,
+        "id": 11
+      },
+      {
+        "alias": "Ra's al Ghul",
+        "name": "Ra's al Ghul",
+        "image": "https://comicvine.gamespot.com/a/uploads/original/0/8190/590706-13.jpg",
+        "description": "Lazarus Pit only sounds cool at first...",
+        "at_large": true,
+        "category": "5",
+        "id": 12
+      },
+      {
+        "id": 13,
+        "name": "",
+        "status": "",
+        "intelligence": "",
+        "strength": "",
+        "speed": "",
+        "durability": "",
+        "power": "",
+        "combat": "",
+        "full_name": "",
+        "aliases": "",
+        "gender": "",
+        "height": "",
+        "weight": "",
+        "eye-color": "",
+        "hair-color": "",
+        "occupation": "",
+        "affiliations": "",
+        "relatives":  "",
+        "image": "",
+        "notes": "",
+        "at_large": true,
+        "danger-level": "",
+        "color": ""
+      }
+    ]
+  }

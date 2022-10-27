@@ -2,18 +2,55 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 
 const initialState = {
-    alias: "",
     name: "",
+    involvement: "",
+    intelligence: "",
+    strength: "",
+    speed: "",
+    durability: "",
+    power: "",
+    combat: "",
+    full_name: "",
+    aliases: "",
+    gender: "",
+    height: "",
+    weight: "",
+    eye_color: "",
+    hair_color: "",
+    occupation: "",
+    affiliations: "",
+    relatives: "",
     image: "",
-    description: "",
-    at_large: "",
-    category: 0,
-};
+    notes: "",
+    at_large: true,
+    danger_level: 0
+}
 
 function EditSuspectForm({ onUpdateSuspect }) {
     const [formData, setFormData] = useState(initialState)
 
-    const { alias, name, image, description, at_large, category } = formData
+    const { name,
+        involvement,
+        intelligence,
+        strength,
+        speed,
+        durability,
+        power,
+        combat,
+        full_name,
+        aliases,
+        gender,
+        height,
+        weight,
+        eye_color,
+        hair_color,
+        occupation,
+        affiliations,
+        relatives,
+        image,
+        notes,
+        danger_level,
+    } = formData
 
     const { id } = useParams();
     const navigate = useNavigate();
@@ -50,145 +87,229 @@ function EditSuspectForm({ onUpdateSuspect }) {
     return (
         <section className="form-section">
             <div className="div-box">
-            <form className="form" onSubmit={handleSubmit}>
-                <label htmlFor="alias">Alias</label>
-                <input
-                    type="text"
-                    id="alias"
-                    name="alias"
-                    onChange={handleChange}
-                    value={alias}
-                />
-                <label htmlFor="image">Photo</label>
-                <input
-                    type="text"
-                    id="image"
-                    name="image"
-                    onChange={handleChange}
-                    value={image}
-                />
-                <img className="avatar-img" src={image} alt={alias} placeholder="Enter a URL" />
-                <label htmlFor="name">Name</label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    onChange={handleChange}
-                    value={name}
-                />
-                <label htmlFor="description">Description
-                    <textarea
-                        id="description"
-                        name="description"
-                        value={description}
+                <form className="form" onSubmit={handleSubmit}>
+                    <h3>Input Suspect Data</h3>
+                    <label htmlFor="name">Title</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
                         onChange={handleChange}
+                        value={name}
                     />
-                </label>
-                <label htmlFor="category">Category
-                    <select
-                        name="category"
-                        value={category}
+                    <label htmlFor="image">Photo</label>
+                    <input
+                        type="text"
+                        id="image"
+                        name="image"
                         onChange={handleChange}
+                        value={image}
+                    />
+                    <img 
+                        className="avatar-img" 
+                        src={image} alt={name} 
+                        placeholder=" " 
+                    />
+                    <label htmlFor="involvement">Category</label>
+                    <select
+                        name="involvement"
+                        id="involvement"
+                        onChange={handleChange}
+                        value={involvement}
                     >
-                        {/* MAKE CATEGORIES */}
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
+                        <option value="">-</option>
+                        <option value="Unaffiliated">Unaffiliated</option>
+                        <option value="Person of Interest">Person of Interest</option>
+                        <option value="Suspect">Suspect</option>
+                        <option value="Perpetrator">Perpetrator</option>
                     </select>
-                </label>
-                
-                {/* FIGURE OUT HOW TO RETAIN THE ADJUSTMENT FOR FREEDOM STATUS
-                PROBABLY NEED A HIGHER COMPONENT TO HANDLE THE STATE FOR ALL COMPONENTS
-                
-                <label>
-                    <select name="at_large" value={at_large} onChange={handleChange}>
-                        <option value={true}>AT LARGE</option>
-                        <option value={false}>INCARCERATED</option>
-                    </select>
-                </label> */}
-                <button className="update-button" type="submit">Update Suspect</button>
-            </form>
-            <Link to={`/suspects/${id}`}><button className="button">Suspect Details</button></Link>
-            <Link to="/suspects"><button className="button">Back to Database</button></Link>
+                    <div className="physical">
+                        <label htmlFor="full_name">Full Name</label>
+                        <input
+                            type="text"
+                            id="full_name"
+                            name="full_name"
+                            onChange={handleChange}
+                            value={full_name}
+                        />
+                        <label htmlFor="aliases">Aliases</label>
+                        <input
+                            type="text"
+                            id="aliases"
+                            name="aliases"
+                            onChange={handleChange}
+                            value={aliases}
+                        />
+                        <label htmlFor="gender">Sex</label>
+                        <select
+                            name="gender"
+                            id="gender"
+                            onChange={handleChange}
+                            value={gender}
+                        >
+                            <option value="">-</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="non-binary">Non-Binary</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label htmlFor="height">Height</label>
+                        <input
+                            type="number"
+                            id="height"
+                            name="height"
+                            min="1"
+                            max="300"
+                            onChange={handleChange}
+                            value={height}
+                        />
+                        <label htmlFor="weight">Weight</label>
+                        <input
+                            type="number"
+                            id="weight"
+                            name="weight"
+                            min="1"
+                            max="300"
+                            onChange={handleChange}
+                            value={weight}
+                        />
+                        <label htmlFor="eye_color">Eye Color</label>
+                        <input
+                            type="text"
+                            id="eye_color"
+                            name="eye_color"
+                            onChange={handleChange}
+                            value={eye_color}
+                        />
+                        <label htmlFor="hair_color">Hair Color</label>
+                        <input
+                            type="text"
+                            id="hair_color"
+                            name="hair_color"
+                            onChange={handleChange}
+                            value={hair_color}
+                        />
+                    </div>
+                    <div className="power">
+                        <label htmlFor="intelligence">Intelligence</label>
+                        <input
+                            type="number"
+                            id="intelligence"
+                            name="intelligence"
+                            min="1"
+                            max="100"
+                            step="1"
+                            onChange={handleChange}
+                            value={intelligence}
+                        />
+                        <label htmlFor="strength">Strength</label>
+                        <input
+                            type="number"
+                            id="strength"
+                            name="strength"
+                            min="1"
+                            max="100"
+                            step="1"
+                            onChange={handleChange}
+                            value={strength}
+                        />
+                        <label htmlFor="speed">Speed</label>
+                        <input
+                            type="number"
+                            id="speed"
+                            name="speed"
+                            min="1"
+                            max="100"
+                            step="1"
+                            onChange={handleChange}
+                            value={speed}
+                        />
+                        <label htmlFor="durability">Durability</label>
+                        <input
+                            type="number"
+                            id="durability"
+                            name="durability"
+                            min="1"
+                            max="100"
+                            step="1"
+                            onChange={handleChange}
+                            value={durability}
+                        />
+                        <label htmlFor="power">Power</label>
+                        <input
+                            type="number"
+                            id="power"
+                            name="power"
+                            min="1"
+                            max="100"
+                            step="1"
+                            onChange={handleChange}
+                            value={power}
+                        />
+                        <label htmlFor="combat">Combat</label>
+                        <input
+                            type="number"
+                            id="combat"
+                            name="combat"
+                            min="1"
+                            max="100"
+                            step="1"
+                            onChange={handleChange}
+                            value={combat}
+                        />
+                        <label htmlFor="danger_level">Chaos Quotient</label>
+                        <input
+                            type="number"
+                            id="danger_level"
+                            name="danger_level"
+                            min="0"
+                            max="10"
+                            step="1"
+                            onChange={handleChange}
+                            value={danger_level}
+                        />
+                    </div>
+                    <div className="bio">
+                        <label htmlFor="occupation">Occupation</label>
+                        <input
+                            type="text"
+                            id="occupation"
+                            name="occupation"
+                            value={occupation}
+                            onChange={handleChange}
+                        />
+
+                        <label htmlFor="affiliations">Affiliations</label>
+                        <textarea
+                            id="affiliations"
+                            name="affiliations"
+                            value={affiliations}
+                            onChange={handleChange}
+                        />
+                        <label htmlFor="relatives">Known Relatives</label>
+                        <textarea
+                            id="relatives"
+                            name="relatives"
+                            value={relatives}
+                            onChange={handleChange}
+                        />
+                        <label htmlFor="notes">Notes</label>
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            value={notes}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <button className="add-button" type="submit">Save</button>
+                </form>
+            </div>
+            <div>
+                <Link to={`/suspects/${id}`}><button className="button">Details</button></Link>
+                <Link to="/suspects"><button className="button">Database</button></Link>
             </div>
         </section>
-    );
-
-
-    //   return (
-    //     <section className="form-section">
-    //         <form className="container" onSubmit={handleSubmit}>
-    //             <h3>Update Suspect Data</h3>
-
-    //             <label htmlFor="alias">Alias</label>
-    //             <input
-    //                 type="text"
-    //                 id="alias"
-    //                 name="alias"
-    //                 onChange={handleChange}
-    //                 value={alias}
-    //             />
-    // <label htmlFor="name">Name</label>
-    // <input
-    //     type="text"
-    //     id="name"
-    //     name="name"
-    //     onChange={handleChange}
-    //     value={name}
-    // />
-    // <label htmlFor="image">Photo</label>
-    // <input
-    //     type="text"
-    //     id="image"
-    //     name="image"
-    //     onChange={handleChange}
-    //     value={image}
-    // />
-    // <label htmlFor="description">Description
-    //     <textarea
-    //         id="description"
-    //         name="description"
-    //         value={description}
-    //         onChange={handleChange}
-    //     />
-    // </label>
-    // <label htmlFor="category">Category
-    //     <select
-    //         name="category"
-    //         value={category}
-    //         onChange={handleChange}
-    //     >
-    //         <option value="1">1</option>
-    //         <option value="2">2</option>
-    //         <option value="3">3</option>
-    //         <option value="4">4</option>
-    //         <option value="5">5</option>
-    //         <option value="6">6</option>
-    //         <option value="7">7</option>
-    //         <option value="8">8</option>
-    //         <option value="9">9</option>
-    //         <option value="10">10</option>
-    //     </select>
-    // </label>
-    // <label>
-    //     <select value={at_large} onChange={handleChange}>
-    //         <option value="true">AT LARGE</option>
-    //         <option value="false">INCARCERATED</option>
-    //     </select>
-    // </label>
-    //             <button className="update-button" type="submit">Update Suspect</button>
-    //             <Link to="/suspects/"><button className="button">Back to Database</button></Link>
-    //             <Link to={`/suspects/${id}`}><button className="button">Suspect Details</button></Link>
-    //         </form>
-    //     </section>
-    // )
+    )
 }
 
 export default EditSuspectForm

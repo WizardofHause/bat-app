@@ -10,10 +10,11 @@ Given an array of characters, any Batperson is able to:
 - Update/edit a character's details - PUT/PATCH
 - Toggle the 'freedom status' of any given character - PUT/PATCH
 
-ToDo:
+CRUD ToDos:
 - Toggle populated characters in SuspectList based on freedom status - PUT/PATCH
 - Add characters to a 'List of Suspects' to evaluate (use freedom toggle) - PUT/PATCH
-- Make EDIT page look the same as the DETAILS page
+
+STYLE ToDos:
 - Align the elements in the NavBar
 - Make DETAILS, FORM, and UPDATE containers all uniform in style
 - Make BUTTONS all consistant 
