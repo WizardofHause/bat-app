@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Search({ search, onSearch, onFiltered }) {
+export default function Search({ search, onSearch, onFiltered, filtered }) {
 
 
 
@@ -13,7 +13,11 @@ export default function Search({ search, onSearch, onFiltered }) {
                 value={search}
                 onChange={onSearch}
             />
-            <button onClick={onFiltered}>Filter Incarcerated</button>
+            {/* <button onClick={onFiltered}>{filtered ? "Filter Incarcerated" : "Show Incarcerated"}</button> */}
+            <label>
+                <input type="checkbox" checked={filtered} onChange={onFiltered}/>
+                Filter Incarcerated
+            </label>
         </div>
     )
 }
