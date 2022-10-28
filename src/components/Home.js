@@ -30,7 +30,7 @@ function TopSuspects({suspects}) {
         <div className="current">
             <h1>Top Suspects</h1>
             {topSuspectCards}
-            <h1>Persons of Interest</h1>
+            <h1 >Persons of Interest</h1>
             {personsOfInterestCards}
         </div>
     )
