@@ -5,7 +5,8 @@ export default function Search({ search, onSearch, onFiltered, filtered }) {
 
 
     return (
-        <div>
+        <div className="suspect-container">
+            <h1>Noted Criminals / Potential Suspects</h1>
             <input
                 id="search"
                 type="text"
@@ -20,7 +21,7 @@ export default function Search({ search, onSearch, onFiltered, filtered }) {
             
             <button onClick={onFiltered}>{filtered ? "Filter Incarcerated" : "Show Incarcerated"}</button> */}
             <label>
-                <input type="checkbox" checked={filtered} onChange={onFiltered}/>
+                <input type="checkbox" checked={filtered} onChange={onFiltered} />
                 Filter Incarcerated
             </label>
         </div>
