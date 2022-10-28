@@ -203,7 +203,7 @@ function EditSuspectForm({ onUpdateSuspect }) {
                             id="weight"
                             name="weight"
                             min="1"
-                            max="300"
+                            max="500"
                             onChange={handleChange}
                             value={weight}
                         />

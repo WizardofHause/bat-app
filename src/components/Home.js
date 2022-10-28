@@ -1,22 +1,25 @@
 import React from 'react'
+import TopSuspectCard from './TopSuspectCard'
 
 function Home({suspects}) {
 
-    // const topSuspects = suspects.filter((suspect) => suspect.involvement === "Suspect")
+    const topSuspectList = suspects.filter((suspect) => suspect.involvement === "Suspect")
 
-    // const topSuspectCards = topSuspects.map((suspect) => {
-    //     return (
-    //         <
-    //     )
-    // })
+    const topSuspectCards = topSuspectList.map((suspect) => {
+        return (
+            <TopSuspectCard
+                key={suspect.id}
+                suspect={suspect}
+                />
+        )
+    })
 
     return (
         <div className="container">
-            <h1>You're super duper brave.</h1>
+            <h1>Top Suspects</h1>
             <hr />
-            {suspects}
+            {topSuspectCards}
             <hr />
-            <h1>Even Alfred thinks so.</h1>
         </div>
     )
 
