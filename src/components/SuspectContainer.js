@@ -1,11 +1,15 @@
 import React from "react";
 import SuspectList from "./SuspectList"
 import Search from "./Search"
-// import SuspectDetails from "./SuspectDetails"
-// import { Routes, Route } from "react-router-dom"
+import SuspectDetails from "./SuspectDetails"
+import { Routes, Route } from "react-router-dom"
+
+//I didn't even end up USING this goddamn thing because the client-side routing wouldn't work
+//SUUUUPER helpful that our lecture and homework materials were all using an antequated version 
+//of React in the first place so this all came as a jolly fuckin surprise. 
 
 
-export default function SuspectContainer({ suspects, search, onSearch, onToggleSuspect, onDeleteSuspect, filtered, onFiltered }) {
+function SuspectContainer({ suspects, search, onSearch, onToggleSuspect, onDeleteSuspect, filtered, onFiltered }) {
     return (
         <div>
             <Search
@@ -20,12 +24,11 @@ export default function SuspectContainer({ suspects, search, onSearch, onToggleS
                 onToggleSuspect={onToggleSuspect}
                 filtered={filtered}
             />
-{/* 
-            <Router>
-                <Routes>
-                    <Route path="/suspects/:id" element={<SuspectDetails/>}/>
-                </Routes>
-            </Router> */}
+            <Routes>
+                <Route path="/suspects/:id" element={<SuspectDetails />} />
+            </Routes>
         </div>
     )
 }
+
+export default SuspectContainer

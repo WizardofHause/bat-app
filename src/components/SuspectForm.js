@@ -88,9 +88,9 @@ function SuspectForm({ onAddSuspect }) {
                         >
                             <option value="">-</option>
                             <option value="Unaffiliated">Unaffiliated</option>
-                            <option value="Criminal">Person of Interest</option>
-                            <option value="Neutral">Suspect</option>
-                            <option value="Ally">Perpetrator</option>
+                            <option value="Person of Interest">Person of Interest</option>
+                            <option value="Suspect">Suspect</option>
+                            <option value="Perpetrator">Perpetrator</option>
                         </select>
                         <label htmlFor="at_large">Status</label>
                         <select

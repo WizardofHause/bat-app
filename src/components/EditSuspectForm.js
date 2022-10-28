@@ -151,6 +151,7 @@ function EditSuspectForm({ onUpdateSuspect }) {
                         onChange={handleChange}
                         value={at_large}
                     >
+                        <option value={null}>-</option>
                         <option value={true}>At Large</option>
                         <option value={""}>Incarcerated</option>
                     </select>
