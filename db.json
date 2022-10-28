@@ -22,14 +22,14 @@
       "relatives": "Jeannie (wife, Deceased); Unborn son (Deceased); Melvin Reipan (Cousin, Deceased)",
       "image": "https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/7538232-three-jokers-1-cvr-fnl-1583776056592.jpg",
       "notes": "Just the worst. Really, no joke!",
-      "at_large": "",
+      "at_large": false,
       "danger_level": "10",
       "color": "purple"
     },
     {
       "id": 2,
       "name": "Two-Face",
-      "involvement": "Person of Interest",
+      "involvement": "Unaffiliated",
       "intelligence": "88",
       "strength": "10",
       "speed": "12",
@@ -48,7 +48,7 @@
       "relatives": "Duela Dent (Daughter), Gilda Dent (Wife), Poison Ivy (Former-Fiance), Rachel Dawes (Girlfriend, Deceased)",
       "image": "https://static.wikia.nocookie.net/batman/images/a/a0/1692963-profile_twoface.jpeg",
       "notes": "Has two faces. One is super gross.",
-      "at_large": true,
+      "at_large": false,
       "danger_level": "8",
       "color": "red"
     },
@@ -100,7 +100,7 @@
       "relatives": "",
       "image": "https://comicvine.gamespot.com/a/uploads/original/11138/111381541/8625217-poison-ivy-7-1-25-variant-674x1024.jpg",
       "notes": "Worse than actual Poison Ivy. Especially for the bank account.",
-      "at_large": false,
+      "at_large": true,
       "danger_level": "9",
       "color": "forest-green"
     },
@@ -126,7 +126,7 @@
       "relatives": "Nora Fries (wife, deceased, then resurrected as Lazara), Charles (Father) and Lorraine Fries (Mother)",
       "image": "https://comicvine.gamespot.com/a/uploads/original/6/66303/2361007-batman_annual_02_1000.jpg",
       "notes": "Cold as ice, and willing to sacrifice FOR his love.",
-      "at_large": false,
+      "at_large": true,
       "danger_level": "8",
       "color": "dark-blue"
     },
@@ -152,7 +152,7 @@
       "relatives": "King Snake (father)",
       "image": "https://static.wikia.nocookie.net/marvel_dc/images/b/b0/Batman_Vol_3_18_Textless.jpg",
       "notes": "Loves venom. Not much of a talker. Worse if Ivy is around",
-      "at_large": false,
+      "at_large": true,
       "danger_level": "8",
       "color": "neon-green"
     },

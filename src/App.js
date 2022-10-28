@@ -9,7 +9,7 @@ import SuspectForm from "./components/SuspectForm"
 import EditSuspectForm from "./components/EditSuspectForm"
 import SuspectDetails from "./components/SuspectDetails"
 
-import SuspectContainer from "./components/SuspectContainer"
+// import SuspectContainer from "./components/SuspectContainer"
 
 
 function App() {
@@ -86,7 +86,7 @@ function App() {
             />
             }
           />
-          <Route
+          {/* <Route
             exact path="/suspects"
             element={
               <SuspectContainer
@@ -99,7 +99,7 @@ function App() {
                 onFiltered={handleFiltered}
               />
             }
-          />
+          /> */}
           <Route
             path="/suspects"
             element={
