@@ -2,7 +2,36 @@ import React from "react"
 import { useNavigate } from "react-router-dom"
 
 function TopSuspectCard({suspect}) {
-    const { id, name, image, at_large, involvement } = suspect
+    const { 
+        id,
+        name,
+        involvement,
+        intelligence,
+        strength,
+        speed,
+        durability,
+        power,
+        combat,
+        full_name,
+        aliases,
+        gender,
+        height,
+        weight,
+        eye_color,
+        hair_color,
+        occupation,
+        affiliations,
+        relatives,
+        image,
+        notes,
+        at_large,
+        danger_level,
+    } = suspect
+
+    const BMI = ((weight) / (height * height)) * 10000
+    const totalStats = (parseInt(intelligence)) + (parseInt(strength)) + (parseInt(speed)) + (parseInt(durability)) + (parseInt(power)) + (parseInt(combat))
+    const formidabilityScore = Math.round(totalStats / BMI)
+
     const navigate = useNavigate();
 
     function showDetails() {
@@ -12,10 +41,14 @@ function TopSuspectCard({suspect}) {
     return(
         <li className="avatar">
                 <figure className="container">
+                    <h3>{involvement}</h3>
                     <h4>{name}</h4>
-                    <h6>{involvement}</h6>
-                    <p className={at_large ? "at-large" : "captured"}>{at_large ? "AT LARGE" : "INCARCERATED"}</p>
+                    <h4>Name: {full_name}</h4>
+                    <p className={at_large ? "at-large" : "captured"}>Status: {at_large ? "AT LARGE" : "INCARCERATED"}</p>
                     <img className="avatar-img" src={image} alt={name} onClick={showDetails}/>
+                    <p>Danger Lvl: {formidabilityScore}</p>
+                    <p>Chaos Lvl: {danger_level}</p>
+                    <p>Notes: {notes}</p>
                 </figure>
         </li>
     )
