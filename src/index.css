@@ -300,9 +300,11 @@ button {
 }
 
 .current {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: block;
+  text-align: center;
+  margin: auto;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
 }
 
 .current h1 {
@@ -311,7 +313,7 @@ button {
 }
 
 .poi {
-  text-align: left;
+  text-align: center;
   border: rgb(255, 247, 0) solid 8px;
   border-radius: 4px;
   width: 32rem;
@@ -320,6 +322,7 @@ button {
   box-shadow: 3px 4px 22px 1px #000000;
   background-color: rgba(135, 115, 0, 0.2);
   color: goldenrod
+
 }
 
 .poi li {

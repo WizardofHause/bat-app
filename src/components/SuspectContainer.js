@@ -4,11 +4,6 @@ import Search from "./Search"
 import SuspectDetails from "./SuspectDetails"
 import { Routes, Route } from "react-router-dom"
 
-//I didn't even end up USING this goddamn thing because the client-side routing wouldn't work
-//SUUUUPER helpful that our lecture and homework materials were all using an antequated version 
-//of React in the first place so this all came as a jolly fuckin surprise. 
-
-
 function SuspectContainer({ suspects, search, onSearch, onToggleSuspect, onDeleteSuspect, filtered, onFiltered }) {
     return (
         <div>
