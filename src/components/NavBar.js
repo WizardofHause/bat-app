@@ -13,7 +13,7 @@ function NavBar() {
                     <Link to="/suspects/new"><li className="nav--title">Upload</li></Link>
                     {/* LINK TO CRIMINALS LIST */}
                     <Link to="/suspects"><li className="nav--title">Database</li></Link>
-                    <Link to="/home"><li className="nav--title">Top Suspects</li></Link>
+                    <Link to="/home"><li className="nav--title">Current</li></Link>
                 </ul>
             </nav>
         </header>

@@ -46,7 +46,7 @@ const SuspectDetails = () => {
 
     return (
         <section>
-            <div className="container">
+            <div className="details-container">
                 <h2>{name}</h2>
                 <div>
                     <img src={image} alt={name} className="avatar-img"/>
@@ -89,10 +89,10 @@ const SuspectDetails = () => {
                         <dd>{combat}</dd>
                     </dl>
                     <dl className="scores">
-                        <dt className="scores-dt">Danger Lvl:</dt> 
-                        <dd className="scores-dd">{formidabilityScore}</dd>
-                        <dt className="scores-dt">Chaos Lvl:</dt> 
-                        <dd className="scores-dd">{danger_level}</dd>
+                        <dt>Danger Lvl:</dt> 
+                        <dd>{formidabilityScore}</dd>
+                        <dt>Chaos Lvl:</dt> 
+                        <dd>{danger_level}</dd>
                     </dl>
                     <dl className="scores">
                         {occupation? <><dt>Occupation:</dt>

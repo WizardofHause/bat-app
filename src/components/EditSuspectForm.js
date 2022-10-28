@@ -103,8 +103,8 @@ function EditSuspectForm({ onUpdateSuspect }) {
     }
 
     return (
-        <section className="form-section">
-            <div className="div-box">
+        <section>
+            <div>
                 <form className="form" onSubmit={handleSubmit}>
                 <fieldset>
                         <legend>Edit</legend>

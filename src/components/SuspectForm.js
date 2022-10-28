@@ -55,10 +55,10 @@ function SuspectForm({ onAddSuspect }) {
     }
 
     return (
-        <section className="form-section">
-            <div className="div-box">
+        <section>
+            <div>
                 <form className="form" onSubmit={handleSubmit}>
-                    <fieldset>
+                    <fieldset className="general">
                         <legend>Upload</legend>
                         <fieldset>
                         <legend>Profile</legend>
