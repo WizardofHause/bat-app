@@ -24,8 +24,8 @@ function SuspectAvatar({ suspect, onDeleteSuspect, onToggleSuspect }) {
                 at_large: !at_large,
             }),
         })
-        .then((r) => r.json())
-        .then((toggledSuspect) => onToggleSuspect(toggledSuspect))
+            .then((r) => r.json())
+            .then((toggledSuspect) => onToggleSuspect(toggledSuspect))
     }
 
     function showDetails() {
@@ -33,15 +33,22 @@ function SuspectAvatar({ suspect, onDeleteSuspect, onToggleSuspect }) {
     }
 
     return (
-        <li className="avatar">
-                <figure className="container">
-                    <h4>{name}</h4>
-                    <button className={at_large ? "at-large" : "captured"} onClick={handleFreedomClick}>{at_large ? "AT LARGE" : "INCARCERATED"}</button>
-                    <img className="avatar-img" src={image} alt={name} onClick={showDetails}/>
+        <div className={at_large ? "free" : "avatar"}>
+            <li>
+                <figure >
+                    <h2>{name}</h2>
+                    <img className="avatar-img" src={image} alt={name} onClick={showDetails} />
+                    <button
+                        className={at_large ? "at-large" : "captured"}
+                        onClick={handleFreedomClick}
+                    >
+                        {at_large ? "AT LARGE" : "INCARCERATED"}
+                    </button>
                     <Link to={`/suspects/${id}/edit`}><button className="button">Edit</button></Link>
                     <button className="button" onClick={handleDeleteClick}>Erase</button>
                 </figure>
-        </li>
+            </li>
+        </div>
     )
 }
 

@@ -1,8 +1,8 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
-function TopSuspectCard({suspect}) {
-    const { 
+function TopSuspectCard({ suspect }) {
+    const {
         id,
         name,
         involvement,
@@ -31,19 +31,18 @@ function TopSuspectCard({suspect}) {
         navigate(`/suspects/${id}/edit`)
     }
 
-    return(
-        <li className="avatar">
-                <figure className="container">
-                    <h3>{involvement}</h3>
-                    <h4>{name}</h4>
-                    <h4>Name: {full_name}</h4>
-                    <p className={at_large ? "at-large" : "captured"}>Status: {at_large ? "AT LARGE" : "INCARCERATED"}</p>
-                    <img className="avatar-img" src={image} alt={name} onClick={showDetails}/>
-                    <p>Danger Lvl: {formidabilityScore}</p>
-                    <p>Chaos Lvl: {danger_level}</p>
-                    <p>Notes: {notes}</p>
-                </figure>
-        </li>
+    return (
+        <div className="suspect">
+            <li>
+                <h2>{involvement}: {name}</h2>
+                <img className="suspect-img" src={image} alt={name} onClick={showDetails} />
+                <p>Name: {full_name}</p>
+                <p>Status: {at_large ? "AT LARGE" : "INCARCERATED"}</p>
+                <p>Danger Lvl: {formidabilityScore}</p>
+                <p>Chaos Lvl: {danger_level}</p>
+                <p>Notes: {notes}</p>
+            </li>
+        </div >
     )
 }
 

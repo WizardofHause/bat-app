@@ -36,7 +36,7 @@ function SuspectList({ suspects, search, onDeleteSuspect, onToggleSuspect, filte
     return (
         <section>
             <h2>Noted Criminals / Potential Suspects</h2>
-            <div className="container">
+            <div className="suspect-container">
                 <ul>{suspectAvatar}</ul>
             </div>
         </section>

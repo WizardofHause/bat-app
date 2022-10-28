@@ -27,7 +27,7 @@ function TopSuspects({suspects}) {
     })
 
     return (
-        <div className="container">
+        <div className="current">
             <h1>Top Suspects</h1>
             <hr />
             {topSuspectCards}
