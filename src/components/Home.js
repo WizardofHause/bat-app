@@ -2,7 +2,7 @@ import React from 'react'
 import TopSuspectCard from './TopSuspectCard'
 import PersonsOfInterestCard from './PersonsOfInterestCard'
 
-function Home({suspects}) {
+function TopSuspects({suspects}) {
 
     const topSuspectList = suspects.filter((suspect) => suspect.involvement === "Suspect")
 
@@ -32,10 +32,11 @@ function Home({suspects}) {
             <hr />
             {topSuspectCards}
             <hr />
+            <h1>Persons of Interest</h1>
             {personsOfInterestCards}
         </div>
     )
 
 }
 
-export default Home
+export default TopSuspects
