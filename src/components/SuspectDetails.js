@@ -49,7 +49,7 @@ const SuspectDetails = () => {
             <div className="details-container">
                 <h2>{name}</h2>
                 <div>
-                    <img src={image} alt={name} className="avatar-img"/>
+                    <img src={image} alt={name} className="details-img"/>
                 </div>
                 <div className="details">
                     <dl>

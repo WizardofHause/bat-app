@@ -35,18 +35,16 @@ function SuspectAvatar({ suspect, onDeleteSuspect, onToggleSuspect }) {
     return (
         <div className={at_large ? "free" : "avatar"}>
             <li>
-                <figure >
-                    <h2>{name}</h2>
-                    <img className="avatar-img" src={image} alt={name} onClick={showDetails} />
-                    <button
-                        className={at_large ? "at-large" : "captured"}
-                        onClick={handleFreedomClick}
-                    >
-                        {at_large ? "AT LARGE" : "INCARCERATED"}
-                    </button>
-                    <Link to={`/suspects/${id}/edit`}><button className="button">Edit</button></Link>
-                    <button className="button" onClick={handleDeleteClick}>Erase</button>
-                </figure>
+                <h1>{name}</h1>
+                <img className={at_large ? "free-img" : "avatar-img"} src={image} alt={name} onClick={showDetails} />
+                <button
+                    className={at_large ? "at-large" : "captured"}
+                    onClick={handleFreedomClick}
+                >
+                    {at_large ? "AT LARGE" : "INCARCERATED"}
+                </button>
+                <Link to={`/suspects/${id}/edit`}><button className="button">Edit</button></Link>
+                <button className="button" onClick={handleDeleteClick}>Erase</button>
             </li>
         </div>
     )

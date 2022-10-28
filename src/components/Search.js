@@ -5,7 +5,7 @@ export default function Search({ search, onSearch, onFiltered, filtered }) {
 
 
     return (
-        <div className="container">
+        <div>
             <input
                 id="search"
                 type="text"
