@@ -1,14 +1,16 @@
 import React from 'react'
 import SuspectAvatar from "./SuspectAvatar"
 
-function SuspectList({ suspects, search, onDeleteSuspect, onToggleSuspect }) {
+function SuspectList({ suspects, search, onDeleteSuspect, onToggleSuspect, filtered }) {
 
     const searchedSuspects = suspects.filter((suspect) =>
         suspect.name.toLowerCase().includes(search.toLowerCase())
         || suspect.full_name.toLowerCase().includes(search.toLowerCase()))
 
+    const filteredSuspects = filtered ? searchedSuspects.filter((suspect) => (suspect.at_large !== (false) && suspect.at_large !== (''))) :
+        searchedSuspects
 
-    const suspectAvatar = searchedSuspects.map((suspect) => {
+    const suspectAvatar = filteredSuspects.map((suspect) => {
         return (
             <SuspectAvatar
                 key={suspect.id}

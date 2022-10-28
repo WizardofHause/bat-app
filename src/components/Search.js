@@ -1,15 +1,19 @@
 import React from 'react'
 
-export default function Search ({ search, handleSearch }) {
+export default function Search({ search, onSearch, onFiltered }) {
+
+
+
     return (
         <div className="container">
-            <input 
+            <input
                 id="search"
                 type="text"
                 placeholder="Search..."
                 value={search}
-                onChange={handleSearch}
+                onChange={onSearch}
             />
+            <button onClick={onFiltered}>Filter Incarcerated</button>
         </div>
     )
 }

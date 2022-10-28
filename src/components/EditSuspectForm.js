@@ -22,8 +22,8 @@ const initialState = {
     relatives: "",
     image: "",
     notes: "",
-    at_large: true,
-    danger_level: 0
+    at_large: "",
+    danger_level: "",
 }
 
 function EditSuspectForm({ onUpdateSuspect }) {
@@ -49,6 +49,7 @@ function EditSuspectForm({ onUpdateSuspect }) {
         relatives,
         image,
         notes,
+        at_large,
         danger_level,
     } = formData
 
@@ -62,9 +63,23 @@ function EditSuspectForm({ onUpdateSuspect }) {
     }, [id])
 
     const handleChange = (e) => {
-        const { name, value } = e.target
+        const { name, value } = e.target;
         setFormData((formData) => ({ ...formData, [name]: value }));
     }
+
+    // const handleAtLarge = (e) => {
+    //     let updatedAtLarge = e.target.value
+    //     if(updatedAtLarge === "true" || updatedAtLarge === "false") {
+    //         updatedAtLarge = JSON.parse(updatedAtLarge)
+    //     }
+
+    //     const updatedSuspect = {
+    //         ...formData.at_large,
+    //         [e.target.at_large]: updatedAtLarge
+    //     }
+
+    //     formData.at_large.setFormData(formData.index, updatedSuspect)
+    // }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -79,16 +94,22 @@ function EditSuspectForm({ onUpdateSuspect }) {
             .then((r) => r.json())
             .then((updatedSuspect) => {
                 onUpdateSuspect(updatedSuspect);
-                navigate.push(`/suspects/${id}`);
-                navigate(`/suspects/${id}`)
+                navigate(`/suspects/${id}`, {replace: true});
             });
     };
+
+    function showDetails() {
+        navigate(`/suspects/${id}`)
+    }
 
     return (
         <section className="form-section">
             <div className="div-box">
                 <form className="form" onSubmit={handleSubmit}>
-                    <h3>Input Suspect Data</h3>
+                <fieldset>
+                        <legend>Edit</legend>
+                        <fieldset>
+                        <legend>Profile</legend>
                     <label htmlFor="name">Title</label>
                     <input
                         type="text"
@@ -105,11 +126,11 @@ function EditSuspectForm({ onUpdateSuspect }) {
                         onChange={handleChange}
                         value={image}
                     />
-                    <img 
-                        className="avatar-img" 
-                        src={image} alt={name} 
-                        placeholder=" " 
-                    />
+                    {image ? <img
+                        className="avatar-img"
+                        src={image} alt={name}
+                        placeholder={name}
+                    /> : null}
                     <label htmlFor="involvement">Category</label>
                     <select
                         name="involvement"
@@ -123,7 +144,19 @@ function EditSuspectForm({ onUpdateSuspect }) {
                         <option value="Suspect">Suspect</option>
                         <option value="Perpetrator">Perpetrator</option>
                     </select>
-                    <div className="physical">
+                    <label htmlFor="at_large">Status</label>
+                    <select
+                        name="at_large"
+                        id="at_large"
+                        onChange={handleChange}
+                        value={at_large}
+                    >
+                        <option value={true}>At Large</option>
+                        <option value={""}>Incarcerated</option>
+                    </select>
+                    </fieldset>
+                    <fieldset className="physical">
+                        <legend>Physical Attributes</legend>
                         <label htmlFor="full_name">Full Name</label>
                         <input
                             type="text"
@@ -189,8 +222,9 @@ function EditSuspectForm({ onUpdateSuspect }) {
                             onChange={handleChange}
                             value={hair_color}
                         />
-                    </div>
-                    <div className="power">
+                    </fieldset>
+                    <fieldset className="power">
+                        <legend>Power Stats</legend>
                         <label htmlFor="intelligence">Intelligence</label>
                         <input
                             type="number"
@@ -268,8 +302,9 @@ function EditSuspectForm({ onUpdateSuspect }) {
                             onChange={handleChange}
                             value={danger_level}
                         />
-                    </div>
-                    <div className="bio">
+                    </fieldset>
+                    <fieldset className="bio">
+                        <legend>Bio</legend>
                         <label htmlFor="occupation">Occupation</label>
                         <input
                             type="text"
@@ -300,12 +335,13 @@ function EditSuspectForm({ onUpdateSuspect }) {
                             value={notes}
                             onChange={handleChange}
                         />
-                    </div>
+                    </fieldset>
                     <button className="add-button" type="submit">Save</button>
+                    </fieldset>
                 </form>
             </div>
             <div>
-                <Link to={`/suspects/${id}`}><button className="button">Details</button></Link>
+                <button className="button" onClick={showDetails}>Details</button>
                 <Link to="/suspects"><button className="button">Database</button></Link>
             </div>
         </section>
