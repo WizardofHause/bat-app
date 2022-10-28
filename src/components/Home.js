@@ -1,5 +1,6 @@
 import React from 'react'
 import TopSuspectCard from './TopSuspectCard'
+import PersonsOfInterestCard from './PersonsOfInterestCard'
 
 function Home({suspects}) {
 
@@ -14,12 +15,24 @@ function Home({suspects}) {
         )
     })
 
+    const personsOfInterest = suspects.filter((suspect) => suspect.involvement === "Person of Interest")
+
+    const personsOfInterestCards = personsOfInterest.map((suspect) => {
+        return (
+            <PersonsOfInterestCard
+                key={suspect.id}
+                suspect={suspect}
+                />
+        )
+    })
+
     return (
         <div className="container">
             <h1>Top Suspects</h1>
             <hr />
             {topSuspectCards}
             <hr />
+            {personsOfInterestCards}
         </div>
     )
 

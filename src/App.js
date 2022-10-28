@@ -4,14 +4,18 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import SuspectList from './components/SuspectList'
-import Search from './components/Search'
+import Search from "./components/Search"
 import SuspectForm from "./components/SuspectForm"
-import SuspectDetails from "./components/SuspectDetails"
 import EditSuspectForm from "./components/EditSuspectForm"
+import SuspectDetails from "./components/SuspectDetails"
+
+import SuspectContainer from "./components/SuspectContainer"
+
 
 function App() {
   const [suspects, setSuspects] = useState([])
   const [search, setSearch] = useState('')
+  const [filtered, setFiltered] = useState(false)
 
   // FETCH DATA FROM DB.JSON
   useEffect(() => {
@@ -38,6 +42,7 @@ function App() {
     setSuspects(updatedSuspects);
   };
 
+  //HANDLE FREEDOM BUTTON
   const handleToggleSuspect = (toggledSuspect) => {
     const toggledSuspects = suspects.map((suspect) => {
       if (suspect.id === toggledSuspect.id) {
@@ -49,6 +54,7 @@ function App() {
     setSuspects(toggledSuspects)
   }
 
+  //HANDLE EDIT FORM
   const handleUpdateSuspect = (updatedSuspect) => {
     setSuspects(suspects => suspects.map(oldSuspect => {
       if (oldSuspect.id === updatedSuspect.id) {
@@ -59,39 +65,75 @@ function App() {
     }))
   }
 
+  //HANDLE FREEDOM FILTER
+  const handleFiltered = () => {
+    setFiltered(!filtered)
+  }
+
   return (
     <Router>
       <div>
-          <NavBar />
-          <Routes >
-            <Route path="/suspects/:id/edit" element={<EditSuspectForm onUpdateSuspect={handleUpdateSuspect} />}/>
-            <Route path="/home" element={<Home />} />
-            <Route path="/suspects/new" element={<SuspectForm onAddSuspect={handleAddSuspect} />} />
-            <Route exact path="/suspects" element={
+        <NavBar />
+        <Routes >
+          <Route
+            path="/home"
+            element={<Home suspects={suspects}/>}
+          />
+          <Route
+            path="/suspects/new"
+            element={<SuspectForm
+              onAddSuspect={handleAddSuspect}
+            />
+            }
+          />
+          <Route
+            exact path="/suspects"
+            element={
+              <SuspectContainer
+                suspects={suspects}
+                search={search}
+                onSearch={handleSearch}
+                onDeleteSuspect={handleDeleteSuspect}
+                onToggleSuspect={handleToggleSuspect}
+                filtered={filtered}
+                onFiltered={handleFiltered}
+              />
+            }
+          />
+          <Route
+            path="/suspects"
+            element={
               <>
                 <Search
                   search={search}
-                  handleSearch={handleSearch}
+                  onSearch={handleSearch}
+                  onFiltered={handleFiltered}
                 />
                 <SuspectList
                   suspects={suspects}
-                  setSuspects={setSuspects}
                   search={search}
                   onDeleteSuspect={handleDeleteSuspect}
                   onToggleSuspect={handleToggleSuspect}
+                  filtered={filtered}
                 />
               </>
             }
-            />
-            <Route path="/suspects/:id"
-              element={
-                <SuspectDetails
-                  onToggleSuspect={handleToggleSuspect}
-                />
-              }
-            />
-
-          </Routes>
+          />
+          <Route path="/suspects/:id"
+            element={
+              <SuspectDetails
+              />
+            }
+          />
+          <Route
+            path="/suspects/:id/edit"
+            element={
+              <EditSuspectForm
+                onUpdateSuspect={handleUpdateSuspect}
+              />
+            }
+          />
+        </Routes>
       </div>
     </Router>
   );

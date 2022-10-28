@@ -2,7 +2,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-    height: 500vh;
+    /* height: 500vh; */
     background-image: linear-gradient(to bottom right, rgb(70, 70, 70), black);
     background-size: cover;
     margin-top: 5rem;
@@ -132,7 +132,6 @@ header li {
   background-size: cover;
   background-position: center;
   margin: auto;
-  /* padding: 100px; */
   color: white;
   display: flex;
   flex-direction: column;
@@ -158,4 +157,53 @@ iframe {
 
 .div-box {
   background-color: rgba(0, 0, 0, .7);
+}
+
+dl {
+  border: 3px solid rgb(70, 70, 70);
+  padding: 0.5em;
+}
+dt {
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  color: goldenrod;
+}
+/* dt::after {
+  content: ":";
+} */
+dd {
+  margin: 0 0 0 110px;
+  padding: 0 0 0.5em 0;
+  font-weight: bold; 
+}
+
+.details-img {
+  justify-self: center;
+  height: 20rem;
+  width: auto;
+  border: rgb(90, 90, 90) solid 3px;
+  border-radius: 4px;
+}
+
+.scores-dt {
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  color: goldenrod;
+} 
+
+.scores-dd { 
+  margin: 0 0 0 110px;
+  padding: 0 0 0.5em 0;
+  font-weight: bold; 
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
 }

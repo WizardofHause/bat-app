@@ -11,15 +11,21 @@ Given an array of characters, any Batperson is able to:
 - Toggle the 'freedom status' of any given character - PUT/PATCH
 
 CRUD ToDos:
-- Toggle populated characters in SuspectList based on freedom status - PUT/PATCH
+- Toggle populated characters in SuspectList based on freedom status - PUT/PATCH (ALL locked up vs Jailbreak)
 - Add characters to a 'List of Suspects' to evaluate (use freedom toggle) - PUT/PATCH
 
 STYLE ToDos:
-- Align the elements in the NavBar
-- Make DETAILS, FORM, and UPDATE containers all uniform in style
++ Align the elements in the NavBar
++ NAVIGATE to suspect details page AS SOON AS they're added
++ Make DETAILS, FORM, and UPDATE containers all uniform in style
 - Make BUTTONS all consistant 
 - Make IMAGES fill their card container with NAME displayed over top
 - Make distinct classes for each character (add selector to ADD and UPDATE, toggle for INCARCERATED??) 
+
++ MAKE CATEGORIES 
+- MAKE AT-LARGE A CATEGORY
+- MAKE APP/CHILD PARENT CONTAINER COMPONENT
+- MAKE SUSPECTS CART COMPONENT
 
 Whimsical Brainstorm: 
 https://whimsical.com/bat-page-outline-DPLbaiVwrGc2KHBbsu6bqP

@@ -18,7 +18,8 @@ function SuspectList({ suspects, search, onDeleteSuspect, onToggleSuspect, filte
 
     const filteredSuspects = filtered
         ? searchedSuspects.filter((suspect) =>
-            (suspect.at_large === true) || (suspect.at_large === "true"))
+            (suspect.at_large === true)
+            || (suspect.at_large === "true"))
         : searchedSuspects
 
     const suspectAvatar = filteredSuspects.map((suspect) => {

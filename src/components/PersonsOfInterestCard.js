@@ -1,7 +1,7 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
-function TopSuspectCard({suspect}) {
+function PersonsOfInterestCard({suspect}) {
     const { 
         id,
         name,
@@ -47,4 +47,4 @@ function TopSuspectCard({suspect}) {
     )
 }
 
-export default TopSuspectCard
+export default PersonsOfInterestCard
