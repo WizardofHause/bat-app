@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 import NavBar from './components/NavBar'
 import Home from './components/Home'
@@ -76,8 +76,25 @@ function App() {
         <NavBar />
         <Routes >
           <Route
+            path="/"
+            element={
+              <div className="home-container">
+                <p className="crime-punch">
+                  Time to punch crime in the face (ง'̀-'́)ง
+                </p>
+                <Link to="/home">
+                <img
+                  src="https://www.freeiconspng.com/uploads/batman-logo-png-3.png"
+                  alt="Batman Logo"
+                  className="main--logo"
+                />
+                </Link>
+              </div>
+            }
+          />
+          <Route
             path="/home"
-            element={<Home suspects={suspects}/>}
+            element={<Home suspects={suspects} />}
           />
           <Route
             path="/suspects/new"

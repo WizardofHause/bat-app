@@ -28,9 +28,9 @@ function TopSuspects({suspects}) {
 
     return (
         <div className="current">
-            <h1>Top Suspects</h1>
+            <h1>Current Top Suspects</h1>
             {topSuspectCards}
-            <h1 >Persons of Interest</h1>
+            <h1 className="current--poi">Current Persons of Interest</h1>
             {personsOfInterestCards}
         </div>
     )

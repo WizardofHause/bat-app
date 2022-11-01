@@ -291,6 +291,7 @@ button {
 .suspect p {
   margin: auto;
   font-size: 1.3rem;
+  padding-top: 8px;
 }
 
 .suspect h2 {
@@ -300,28 +301,33 @@ button {
 }
 
 .current {
-  display: block;
+  display: flex;
   text-align: center;
   margin: auto;
-  /* flex-direction: row;
-  flex-wrap: wrap; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .current h1 {
   margin: auto;
-  margin-left: 140px
+  color: goldenrod;
+}
+
+.current--poi {
+  padding-top: 50px;
 }
 
 .poi {
-  text-align: center;
-  border: rgb(255, 247, 0) solid 8px;
+  text-align: left;
+  border: rgb(169, 163, 0) solid 8px;
   border-radius: 4px;
   width: 32rem;
   height: 22rem;
   margin: 1rem 1rem;
   box-shadow: 3px 4px 22px 1px #000000;
   background-color: rgba(135, 115, 0, 0.2);
-  color: goldenrod
+  color: rgb(169, 163, 0)
 
 }
 
@@ -334,7 +340,7 @@ button {
 .poi-img {
   height: 18.5rem;
   width: auto;
-  border: rgb(255, 247, 0) solid 3px;
+  border: rgb(169, 163, 0) solid 3px;
   border-radius: 4px;
   float: left;
   margin-right: 15px;
@@ -345,6 +351,7 @@ button {
 .poi p {
   margin: auto;
   font-size: 1.3rem;
+  padding-top: 10px;
 }
 
 .poi h2 {
@@ -364,4 +371,21 @@ button {
 
 .form {
   box-shadow: 3px 4px 22px 1px #000000;
+}
+
+.home-container {
+  text-align: center;
+}
+
+.crime-punch {
+  font-size: 50px;
+  color: goldenrod;
+  text-align: center;
+  background-size: fill;
+}
+
+.main--logo {
+  width: auto;
+  height: 100%;
+  padding: 30px;
 }
