@@ -21,8 +21,15 @@ function PersonsOfInterestCard({ suspect }) {
         danger_level,
     } = suspect
 
+    //FUN LITTLE CALCULATED STAT BASED ON POWER STATS AND CHARACTER BMI
     const BMI = ((weight) / (height * height)) * 10000
-    const totalStats = (parseInt(intelligence)) + (parseInt(strength)) + (parseInt(speed)) + (parseInt(durability)) + (parseInt(power)) + (parseInt(combat))
+    const totalStats =
+        (parseInt(intelligence))
+        + (parseInt(strength))
+        + (parseInt(speed))
+        + (parseInt(durability))
+        + (parseInt(power))
+        + (parseInt(combat))
     const formidabilityScore = Math.round(totalStats / BMI)
 
     const navigate = useNavigate();

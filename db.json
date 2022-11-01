@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "The Joker",
-      "involvement": "Suspect",
+      "involvement": "Person of Interest",
       "intelligence": "100",
       "strength": "10",
       "speed": "12",
@@ -100,7 +100,7 @@
       "relatives": "",
       "image": "https://comicvine.gamespot.com/a/uploads/original/11138/111381541/8625217-poison-ivy-7-1-25-variant-674x1024.jpg",
       "notes": "Worse than actual Poison Ivy. Especially for the bank account.",
-      "at_large": false,
+      "at_large": true,
       "danger_level": "9",
       "color": "forest-green"
     },
@@ -126,7 +126,7 @@
       "relatives": "Nora Fries (wife, deceased, then resurrected as Lazara), Charles (Father) and Lorraine Fries (Mother)",
       "image": "https://comicvine.gamespot.com/a/uploads/original/6/66303/2361007-batman_annual_02_1000.jpg",
       "notes": "Cold as ice, and willing to sacrifice FOR his love.",
-      "at_large": false,
+      "at_large": true,
       "danger_level": "8",
       "color": "dark-blue"
     },

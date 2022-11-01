@@ -22,7 +22,13 @@ function TopSuspectCard({ suspect }) {
     } = suspect
 
     const BMI = ((weight) / (height * height)) * 10000
-    const totalStats = (parseInt(intelligence)) + (parseInt(strength)) + (parseInt(speed)) + (parseInt(durability)) + (parseInt(power)) + (parseInt(combat))
+    const totalStats =
+        (parseInt(intelligence))
+        + (parseInt(strength))
+        + (parseInt(speed))
+        + (parseInt(durability))
+        + (parseInt(power))
+        + (parseInt(combat))
     const formidabilityScore = Math.round(totalStats / BMI)
 
     const navigate = useNavigate();
@@ -35,7 +41,12 @@ function TopSuspectCard({ suspect }) {
         <div className="suspect">
             <li>
                 <h2>{involvement}: {name}</h2>
-                <img className="suspect-img" src={image} alt={name} onClick={showDetails} />
+                <img
+                    className="suspect-img"
+                    src={image}
+                    alt={name}
+                    onClick={showDetails}
+                />
                 <p>Name: {full_name}</p>
                 <p>Status: {at_large ? "AT LARGE" : "INCARCERATED"}</p>
                 <p>Danger Lvl: {formidabilityScore}</p>

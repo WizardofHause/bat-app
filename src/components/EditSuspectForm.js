@@ -67,20 +67,6 @@ function EditSuspectForm({ onUpdateSuspect }) {
         setFormData((formData) => ({ ...formData, [name]: value }));
     }
 
-    // const handleAtLarge = (e) => {
-    //     let updatedAtLarge = e.target.value
-    //     if(updatedAtLarge === "true" || updatedAtLarge === "false") {
-    //         updatedAtLarge = JSON.parse(updatedAtLarge)
-    //     }
-
-    //     const updatedSuspect = {
-    //         ...formData.at_large,
-    //         [e.target.at_large]: updatedAtLarge
-    //     }
-
-    //     formData.at_large.setFormData(formData.index, updatedSuspect)
-    // }
-
     const handleSubmit = (e) => {
         e.preventDefault();
 

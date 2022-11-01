@@ -4,7 +4,14 @@ import Search from "./Search"
 import SuspectDetails from "./SuspectDetails"
 import { Routes, Route } from "react-router-dom"
 
-function SuspectContainer({ suspects, search, onSearch, onToggleSuspect, onDeleteSuspect, filtered, onFiltered }) {
+function SuspectContainer({
+    suspects,
+    search,
+    onSearch,
+    onToggleSuspect,
+    onDeleteSuspect,
+    filtered,
+    onFiltered }) {
     return (
         <div>
             <Search
