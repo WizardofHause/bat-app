@@ -11,14 +11,13 @@ Given an array of characters, any Batperson should be able to:
 - Toggle "AT LARGE / INCARCERATED" status of any given suspect
 - Filter the database of suspects based on at_large
 - Populate "Suspects" and "Persons of Interest" to the homepage by editing their category (Unaffiliated, Persons of Interest, Suspects, and Perpetrators)
-- NAVIGATE to suspect details page AS SOON AS they're added/their details are edited
+- Navigate to suspect details page AS SOON AS they're added/their details are edited
 - Toggle populated characters in SuspectList based on freedom status
 - Add characters to a 'List of Suspects' to evaluate
+- Navigate to current list of suspects and persons of interest via the logo Link on the "/" route
 
 Challenges: 
 Client-side routing nested routes/components (which mostly had to deal with the version of React I was using), lining up the descriptive list elements, styling the NavBar, and styling the Current Suspects display page. You might notice the SuspectContainer that I left as an abandoned component mixed in there. I'm not sure why that hooking that up wouldn't allow for the SuspectDetails component to render, but maybe someone else knows...?
-
-The way I left "/home" as a route to the Current Suspects Page is confusing, and loading up localhost:3000 doesn't really display anything other than a repeating background gradient. Also the CSS for the Current Suspects Page is a head-scratcher that I eventually just gave up on.  
 
 I had a lot of trouble getting the at_large value on the EditSuspectForm to agree with the at_large value in the SuspectList component, but had a facepalm moment when I remembered that JS reads the string "false" as truthy. 
 

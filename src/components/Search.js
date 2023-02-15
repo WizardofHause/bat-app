@@ -2,8 +2,6 @@ import React from 'react'
 
 export default function Search({ search, onSearch, onFiltered, filtered }) {
 
-
-
     return (
         <div className="suspect-container">
             <h1>Noted Criminals / Potential Suspects</h1>
