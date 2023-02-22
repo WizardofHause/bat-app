@@ -67,7 +67,7 @@ function App() {
 
   //HANDLE FREEDOM FILTER
   const handleFiltered = () => {
-    setFiltered(!filtered)
+    setFiltered(prevState => !prevState)
   }
 
   return (

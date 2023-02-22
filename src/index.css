@@ -1,12 +1,12 @@
 body {
   font-family: 'Alegreya Sans SC', sans-serif;
-  background-image: linear-gradient(to bottom right, rgb(70, 70, 70), black);
-  background-size: cover;
+  background: linear-gradient(to bottom right, rgb(70, 70, 70), black);
+  background-size: fill;
   margin-top: 5rem;
-  padding: 1.875rem;
+  padding: 2rem;
 }
 
-header {
+.nav-container {
   background-color: rgba(0, 0, 0, .5);
   position: fixed;
   top: 0;
@@ -15,6 +15,7 @@ header {
   height: 5rem;
   display: flex;
   align-items: center;
+  font-size: 30px;
 }
 
 header img {
@@ -32,10 +33,6 @@ header li {
   color: goldenrod;
   text-decoration: none;
   font-weight: 600;
-}
-
-.nav-container {
-  font-size: 30px;
 }
 
 .button:hover {
@@ -303,19 +300,12 @@ button {
 .current {
   display: flex;
   text-align: center;
-  margin: auto;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .current h1 {
-  margin: auto;
   color: goldenrod;
-}
-
-.current--poi {
-  padding-top: 50px;
 }
 
 .poi {
