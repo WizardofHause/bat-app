@@ -29,11 +29,11 @@ function TopSuspects({ suspects }) {
     return (
         <div className="current">
             <div>
-                <h1>Current Top Suspects</h1>
+                <h1>Top Suspects</h1>
                 {topSuspectCards}
             </div>
             <div>
-                <h1 className="current--poi">Current Persons of Interest</h1>
+                <h1 className="current--poi">Persons of Interest</h1>
                 {personsOfInterestCards}
             </div>
         </div>

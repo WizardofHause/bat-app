@@ -379,3 +379,7 @@ button {
   height: 100%;
   padding: 30px;
 }
+
+.navbar--link {
+  text-decoration: none;
+}

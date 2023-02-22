@@ -16,14 +16,14 @@ function NavBar() {
             <nav>
                 <ul>
                     {/* FORM TO ADD CRIMINALS */}
-                    <Link to="/suspects/new">
+                    <Link to="/suspects/new" className="navbar--link">
                         <li className="nav--title">Upload</li>
                     </Link>
                     {/* LINK TO CRIMINALS LIST */}
-                    <Link to="/suspects">
+                    <Link to="/suspects" className="navbar--link">
                         <li className="nav--title">Database</li>
                     </Link>
-                    <Link to="/home">
+                    <Link to="/home" className="navbar--link">
                         <li className="nav--title">Current</li>
                     </Link>
                 </ul>
